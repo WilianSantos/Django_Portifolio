@@ -11455,3 +11455,7 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+.fa-linkedin{    color: #0E2CB3;}
+.fa-github{    color: #4D24B5;}
+.fa-github:hover{    color: #632EE8;}
+.fa-linkedin:hover{    color: #1239E6;}
