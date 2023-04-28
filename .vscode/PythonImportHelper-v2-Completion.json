@@ -33,6 +33,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -232,6 +248,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_portifolio.migrations.0003_project_url",
+        "description": "app_portifolio.migrations.0003_project_url",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_portifolio', '0002_rename_category_project_descricao_and_more'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='project',\n            name='url',\n            field=models.CharField(default=1, max_length=60, verbose_name='URL'),\n            preserve_default=False,",
+        "detail": "app_portifolio.migrations.0003_project_url",
+        "documentation": {}
+    },
+    {
         "label": "ProjectAdmin",
         "kind": 6,
         "importPath": "app_portifolio.admin",
@@ -254,7 +279,7 @@
         "kind": 6,
         "importPath": "app_portifolio.models",
         "description": "app_portifolio.models",
-        "peekOfCode": "class Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})",
+        "peekOfCode": "class Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)",
         "detail": "app_portifolio.models",
         "documentation": {}
     },
@@ -263,7 +288,7 @@
         "kind": 2,
         "importPath": "app_portifolio.models",
         "description": "app_portifolio.models",
-        "peekOfCode": "def get_file_path(_instance, filename):\n    ext = filename.split('.')[-1]\n    filename = f'{uuid.uuid4()}.{ext}'\n    return filename\nclass Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})",
+        "peekOfCode": "def get_file_path(_instance, filename):\n    ext = filename.split('.')[-1]\n    filename = f'{uuid.uuid4()}.{ext}'\n    return filename\nclass Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)",
         "detail": "app_portifolio.models",
         "documentation": {}
     },
@@ -443,7 +468,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -452,7 +477,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',\n        'PORT': '3306',\n    }\n}",
         "detail": "portifolio.settings",
         "documentation": {}
     },
