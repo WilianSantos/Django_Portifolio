@@ -222,6 +222,14 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "importPath": "app_portifolio.urls",
+        "description": "app_portifolio.urls",
+        "isExtraImport": true,
+        "detail": "app_portifolio.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -585,7 +593,7 @@
         "kind": 5,
         "importPath": "portifolio.urls",
         "description": "portifolio.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('app_portifolio.urls'))\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('app_portifolio.urls'))\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "portifolio.urls",
         "documentation": {}
     },
