@@ -1,24 +1,42 @@
 {% extends 'base.html' %}
-{% load static %}
+{% block 'content' %}		
+		<!-- top-area Start -->
+      {% include 'top-area.html' %}
+		<!-- top-area End -->
+	
+		<!--welcome-hero start -->
+      {% include 'welcome.html' %}
+		<!--welcome-hero end -->
 
-{% block content %}
+		<!--about start -->
+      {% include 'about.html' %}
+		<!--about end -->
+		
+		<!--education start -->
+      {% include 'education.html' %}
+		<!--education end -->
 
-        <!-- Masthead-->
-            {% include 'masthead.html' %}
+		<!--skills start -->
+      {% include 'skills.html' %}
+		<!--skills end -->
 
-        <!-- About-->
-            {% include 'about.html' %}
+		<!--experience start -->
+      {% include 'experience.html' %}
+		<!--experience end -->
 
-        <!-- Services-->
-            {% include 'service.html' %}
+		<!--profiles start -->
+      {% include 'profiles.html' %}
+		<!--profiles end -->
 
-        <!-- Portfolio-->
-            {% include 'project.html' %}
-        
-        <!-- Contact-->
-            {% include 'contact.html' %}
+		<!--portfolio start -->
+      {% include 'portfolio.html' %}
+		<!--portfolio end -->
 
-        <!-- Footer-->
-            {% include 'footer.html' %}
-            
-{% endblock content %}
+		{% comment %} <!--contact start -->
+      {% include 'contact.html' %}
+		<!--contact end --> {% endcomment %}
+
+		<!--footer-copyright start-->
+      {% include 'footer.html' %}
+		<!--footer-copyright end-->
+{% endblock 'content' %}

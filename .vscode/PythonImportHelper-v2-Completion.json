@@ -49,6 +49,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -190,6 +222,15 @@
         "documentation": {}
     },
     {
+        "label": "dj_database_url",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -206,35 +247,27 @@
         "documentation": {}
     },
     {
-        "label": "MEDIA_ROOT",
-        "importPath": "portifolio.settings",
-        "description": "portifolio.settings",
-        "isExtraImport": true,
-        "detail": "portifolio.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "importPath": "portifolio.settings",
-        "description": "portifolio.settings",
-        "isExtraImport": true,
-        "detail": "portifolio.settings",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "importPath": "app_portifolio.urls",
-        "description": "app_portifolio.urls",
-        "isExtraImport": true,
-        "detail": "app_portifolio.urls",
-        "documentation": {}
-    },
-    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Cling",
+        "importPath": "dj_static",
+        "description": "dj_static",
+        "isExtraImport": true,
+        "detail": "dj_static",
+        "documentation": {}
+    },
+    {
+        "label": "MediaCling",
+        "importPath": "dj_static",
+        "description": "dj_static",
+        "isExtraImport": true,
+        "detail": "dj_static",
         "documentation": {}
     },
     {
@@ -265,12 +298,21 @@
         "documentation": {}
     },
     {
-        "label": "ProjectAdmin",
+        "label": "Migration",
         "kind": 6,
-        "importPath": "app_portifolio.admin",
-        "description": "app_portifolio.admin",
-        "peekOfCode": "class ProjectAdmin(admin.ModelAdmin):\n    list_display = ('projeto', 'descricao')",
-        "detail": "app_portifolio.admin",
+        "importPath": "app_portifolio.migrations.0004_experiencias_formacao_projetos_skills_delete_project",
+        "description": "app_portifolio.migrations.0004_experiencias_formacao_projetos_skills_delete_project",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_portifolio', '0003_project_url'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Experiencias',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('proficao', models.CharField(max_length=50, verbose_name='Profição')),",
+        "detail": "app_portifolio.migrations.0004_experiencias_formacao_projetos_skills_delete_project",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app_portifolio.migrations.0005_alter_experiencias_cidade_alter_formacao_duracao_ano",
+        "description": "app_portifolio.migrations.0005_alter_experiencias_cidade_alter_formacao_duracao_ano",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('app_portifolio', '0004_experiencias_formacao_projetos_skills_delete_project'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='experiencias',\n            name='cidade',\n            field=models.CharField(max_length=50, verbose_name='Cidade'),\n        ),",
+        "detail": "app_portifolio.migrations.0005_alter_experiencias_cidade_alter_formacao_duracao_ano",
         "documentation": {}
     },
     {
@@ -283,11 +325,38 @@
         "documentation": {}
     },
     {
-        "label": "Project",
+        "label": "Projetos",
         "kind": 6,
         "importPath": "app_portifolio.models",
         "description": "app_portifolio.models",
-        "peekOfCode": "class Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)",
+        "peekOfCode": "class Projetos(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)\n    def __str__(self):\n        return self.projeto\nclass Formacao(models.Model):\n    duracao_ano = models.CharField('Duração', max_length=20)\n    formacao = models.CharField('Formação', max_length=100)\n    universidade = models.CharField('Universidade', max_length=100)",
+        "detail": "app_portifolio.models",
+        "documentation": {}
+    },
+    {
+        "label": "Formacao",
+        "kind": 6,
+        "importPath": "app_portifolio.models",
+        "description": "app_portifolio.models",
+        "peekOfCode": "class Formacao(models.Model):\n    duracao_ano = models.CharField('Duração', max_length=20)\n    formacao = models.CharField('Formação', max_length=100)\n    universidade = models.CharField('Universidade', max_length=100)\n    local = models.CharField('Local', max_length=100)\n    def __str__(self):\n        return self.formacao\nclass Skills(models.Model):\n    nome = models.CharField('Nome', max_length=15)\n    porcentagem = models.IntegerField('Porcentagem')",
+        "detail": "app_portifolio.models",
+        "documentation": {}
+    },
+    {
+        "label": "Skills",
+        "kind": 6,
+        "importPath": "app_portifolio.models",
+        "description": "app_portifolio.models",
+        "peekOfCode": "class Skills(models.Model):\n    nome = models.CharField('Nome', max_length=15)\n    porcentagem = models.IntegerField('Porcentagem')\n    def __str__(self):\n        return self.nome\nclass Experiencias(models.Model):\n    proficao = models.CharField('Profição', max_length=50)\n    duracao_ano = models.CharField('Duração', max_length=15)\n    empresa = models.CharField('Empresa', max_length=50)\n    cidade = models.CharField('Cidade', max_length=50)",
+        "detail": "app_portifolio.models",
+        "documentation": {}
+    },
+    {
+        "label": "Experiencias",
+        "kind": 6,
+        "importPath": "app_portifolio.models",
+        "description": "app_portifolio.models",
+        "peekOfCode": "class Experiencias(models.Model):\n    proficao = models.CharField('Profição', max_length=50)\n    duracao_ano = models.CharField('Duração', max_length=15)\n    empresa = models.CharField('Empresa', max_length=50)\n    cidade = models.CharField('Cidade', max_length=50)\n    def __str__(self):\n        return self.proficao",
         "detail": "app_portifolio.models",
         "documentation": {}
     },
@@ -296,7 +365,7 @@
         "kind": 2,
         "importPath": "app_portifolio.models",
         "description": "app_portifolio.models",
-        "peekOfCode": "def get_file_path(_instance, filename):\n    ext = filename.split('.')[-1]\n    filename = f'{uuid.uuid4()}.{ext}'\n    return filename\nclass Project(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    descricao = models.CharField('Descrição', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)",
+        "peekOfCode": "def get_file_path(_instance, filename):\n    ext = filename.split('.')[-1]\n    filename = f'{uuid.uuid4()}.{ext}'\n    return filename\nclass Projetos(models.Model):\n    projeto = models.CharField('Projeto', max_length=20)\n    imagem = StdImageField('Imagem', upload_to=get_file_path, variations={'thumb': (650, 350)})\n    url = models.CharField('URL', max_length=60)\n    def __str__(self):\n        return self.projeto",
         "detail": "app_portifolio.models",
         "documentation": {}
     },
@@ -305,7 +374,7 @@
         "kind": 5,
         "importPath": "app_portifolio.urls",
         "description": "app_portifolio.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', IndexView.as_view(), name='index')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', IndexView.as_view(), name='index'),\n    #path('enviar_email', views.enviar_email, name='enviar_email')\n]",
         "detail": "app_portifolio.urls",
         "documentation": {}
     },
@@ -314,7 +383,7 @@
         "kind": 6,
         "importPath": "app_portifolio.views",
         "description": "app_portifolio.views",
-        "peekOfCode": "class IndexView(TemplateView):\n    template_name = 'index.html'\n    def get_context_data(self, **kwargs):\n        context = super(IndexView, self).get_context_data(**kwargs)\n        context['projeto'] = Project.objects.order_by('?').all()\n        return context",
+        "peekOfCode": "class IndexView(TemplateView):\n    template_name = 'index.html'\n    def get_context_data(self, **kwargs):\n        context = super(IndexView, self).get_context_data(**kwargs)\n        context['projetos'] = Projetos.objects.order_by('?').all()\n        context['formacao'] = Formacao.objects.order_by('?').all()\n        context['skills'] = Skills.objects.order_by('?').all()\n        context['experiencias'] = Experiencias.objects.order_by('?').all()\n        return context",
         "detail": "app_portifolio.views",
         "documentation": {}
     },
@@ -476,7 +545,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',",
+        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'bd_portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -485,7 +554,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',\n        'PORT': '3306',\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'bd_portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',\n        'PORT': '3306',\n    }\n}",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -602,7 +671,7 @@
         "kind": 5,
         "importPath": "portifolio.wsgi",
         "description": "portifolio.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = Cling(MediaCling(get_wsgi_application()))",
         "detail": "portifolio.wsgi",
         "documentation": {}
     },

@@ -1,13 +1,17 @@
 from django.views.generic import TemplateView
 
-from .models import Project
+from .models import Formacao, Projetos, Skills, Experiencias 
 
 
 class IndexView(TemplateView):
     
     template_name = 'index.html'
     
+    
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
-        context['projeto'] = Project.objects.order_by('?').all()
+        context['projetos'] = Projetos.objects.order_by('?').all()
+        context['formacao'] = Formacao.objects.order_by('?').all()
+        context['skills'] = Skills.objects.order_by('?').all()
+        context['experiencias'] = Experiencias.objects.order_by('?').all()
         return context

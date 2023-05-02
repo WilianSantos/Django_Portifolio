@@ -18,8 +18,8 @@ from django.urls import path, include
 
 from django.conf.urls.static import static
 from django.conf import settings
-from portifolio.settings import MEDIA_ROOT, MEDIA_URL
-from app_portifolio.urls import urlpatterns
+from .settings import MEDIA_ROOT, MEDIA_URL, STATIC_ROOT, STATIC_URL
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

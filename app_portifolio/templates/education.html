@@ -1,0 +1,34 @@
+<section id="education" class="education">
+    <div class="section-heading text-center">
+        <h2>Formação</h2>
+    </div>
+    <div class="container">
+        <div class="education-horizontal-timeline">
+            <div class="row">
+                {% for i in formacao %}
+                    <div class="col-sm-4">
+                        <div class="single-horizontal-timeline">
+                            <div class="experience-time">
+                                <h2> {{ i.duracao_ano }} </h2>
+                                <h3> {{ i.formacao }} </h3>
+                            </div><!--/.experience-time-->
+                            <div class="timeline-horizontal-border">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <span class="single-timeline-horizontal"></span>
+                            </div>
+                            <div class="timeline">
+                                <div class="timeline-content">
+                                    <h4 class="title">
+                                        {{ i.universidade }}
+                                    </h4>
+                                    <h5> {{ i.local }} </h5>
+                                </div><!--/.timeline-content-->
+                            </div><!--/.timeline-->
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</section><!--/.education-->

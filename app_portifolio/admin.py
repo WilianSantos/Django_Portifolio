@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from .models import Project
+from .models import Formacao, Projetos, Skills, Experiencias
 
 
-@admin.register(Project)
-class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('projeto', 'descricao')
+admin.site.register(Projetos)    
+admin.site.register(Formacao)
+admin.site.register(Skills) 
+admin.site.register(Experiencias)
