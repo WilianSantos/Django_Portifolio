@@ -770,7 +770,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-p*k4e@=rbu5y*k%&72)0sp5p50&z@6atd@3vn_5nktlghlz=9#'\n#os.environ.get('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -779,7 +779,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'app_portifolio',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-p*k4e@=rbu5y*k%&72)0sp5p50&z@6atd@3vn_5nktlghlz=9#'\n#os.environ.get('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'app_portifolio',\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -842,7 +842,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.mysql',\n#         'NAME': 'bd_portifolio',\n#         'USER': 'root',\n#         'PASSWORD': 'wilian',\n#         'HOST': 'localhost',",
+        "peekOfCode": "WSGI_APPLICATION = 'portifolio.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'bd_portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',",
         "detail": "portifolio.settings",
         "documentation": {}
     },
@@ -851,7 +851,7 @@
         "kind": 5,
         "importPath": "portifolio.settings",
         "description": "portifolio.settings",
-        "peekOfCode": "DATABASES = {\n    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600)\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME': 'bd_portifolio',\n        'USER': 'root',\n        'PASSWORD': 'wilian',\n        'HOST': 'localhost',\n        'PORT': '3306',\n    }\n}",
         "detail": "portifolio.settings",
         "documentation": {}
     },
